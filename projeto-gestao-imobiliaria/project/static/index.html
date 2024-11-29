@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão Imobiliária</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Gestão Imobiliária</h1>
+
+    <section>
+        <h2>Registrar Inquilino</h2>
+        <form id="tenant-form">
+            <input type="text" id="tenant-name" placeholder="Nome" required>
+            <input type="text" id="tenant-contact" placeholder="Contato" required>
+            <input type="text" id="tenant-address" placeholder="Endereço do Imóvel" required>
+            <button type="submit">Adicionar Inquilino</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Lista de Inquilinos</h2>
+        <button id="refresh-tenants">Atualizar Lista</button>
+        <ul id="tenant-list"></ul>
+    </section>
+
+    <section>
+        <h2>Registrar Aluguel</h2>
+        <form id="rental-form">
+            <input type="number" id="rental-tenant-id" placeholder="ID do Inquilino" required>
+            <input type="number" step="0.01" id="rental-value" placeholder="Valor do Aluguel" required>
+            <input type="date" id="rental-due-date" required>
+            <input type="text" id="rental-status" placeholder="Status (ex.: pago, pendente)" required>
+            <button type="submit">Adicionar Aluguel</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Lista de Aluguéis</h2>
+        <button id="refresh-rentals">Atualizar Lista</button>
+        <ul id="rental-list"></ul>
+    </section>
+
+    <script src="/script.js"></script>
+</body>
+</html>
